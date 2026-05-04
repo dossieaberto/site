@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 export default function AdminLoginPage() {
   return (
     <main className="flex min-h-screen items-center justify-center px-4 py-10">
-      <section className="w-full max-w-md rounded-lg border border-border bg-surface p-6 shadow-sm">
+      <section className="w-full max-w-md rounded-md border border-border/85 bg-surface p-6">
         <BrandLogo siteName={SITE_NAME} variant="admin" />
-        <h1 className="mt-8 text-3xl font-black">Entrar no painel</h1>
+        <h1 className="mt-8 text-3xl font-black">Entrar no painel editorial</h1>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          Acesso restrito a usuários com role de administrador no Supabase.
+          Acesso restrito a contas autorizadas da redação.
         </p>
 
         {!isSupabaseConfigured ? (
-          <div className="mt-5 rounded-lg border border-dashed border-border bg-muted p-4 text-sm leading-6 text-muted-foreground">
+          <div className="mt-5 rounded-md border border-dashed border-border bg-muted p-4 text-sm leading-6 text-muted-foreground">
             Configure as variáveis do Supabase na Vercel para ativar o login real.
           </div>
         ) : null}

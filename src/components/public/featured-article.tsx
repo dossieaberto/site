@@ -5,7 +5,7 @@ import type { Article } from "@/types/content";
 
 export function FeaturedArticle({ article }: { article: Article }) {
   return (
-    <article className="grid overflow-hidden rounded-lg border border-border bg-surface shadow-sm lg:grid-cols-[1.25fr_0.75fr]">
+    <article className="grid overflow-hidden rounded-md border border-border/85 bg-surface lg:grid-cols-[1.25fr_0.75fr]">
       <Link href={`/noticias/${article.slug}`} className="relative min-h-72 overflow-hidden bg-muted lg:min-h-[460px]">
         {article.coverImage ? (
           <Image
@@ -26,7 +26,7 @@ export function FeaturedArticle({ article }: { article: Article }) {
         <Link href={`/${article.category.slug}`} className="text-xs font-black uppercase tracking-[0.2em] text-accent">
           {article.category.name}
         </Link>
-        <h1 className="mt-3 text-4xl font-black leading-[0.98] md:text-5xl">
+        <h1 className="mt-3 text-4xl font-black leading-[1.02] md:text-5xl">
           <Link href={`/noticias/${article.slug}`} className="hover:text-accent">
             {article.title}
           </Link>

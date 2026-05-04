@@ -18,19 +18,19 @@ export function PushPrompt() {
       return;
     }
 
-    setMessage("Permissão concedida. A inscrição será ativada quando as chaves VAPID forem configuradas.");
+    setMessage("Permissão concedida. Os alertas serão ativados quando a configuração estiver concluída.");
   }
 
   return (
-    <section className="rounded-lg border border-border bg-surface p-5">
+    <section className="rounded-md border border-border/85 bg-surface p-5">
       <div className="flex items-start gap-3">
-        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-white">
+        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
           <Bell aria-hidden size={18} />
         </span>
         <div>
           <h2 className="text-lg font-black">Alertas de novas matérias</h2>
           <p className="mt-1 text-sm leading-6 text-muted-foreground">
-            Estrutura inicial para notificações push. O envio real depende das chaves VAPID no ambiente.
+            Receba avisos quando a redação publicar uma nova cobertura relevante.
           </p>
         </div>
       </div>
