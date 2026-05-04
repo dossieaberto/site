@@ -31,7 +31,7 @@ export default async function AuthorPage({ params }: PageProps) {
   return (
     <main className="mx-auto max-w-7xl px-4 py-8 md:px-6">
       <div className="flex items-center gap-4 border-b border-border pb-6">
-        <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent text-xl font-black text-white">
+            <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent text-xl font-black text-accent-foreground">
           {initials(author.fullName)}
         </span>
         <div>

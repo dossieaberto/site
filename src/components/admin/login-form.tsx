@@ -38,7 +38,7 @@ export function LoginForm() {
       <button
         type="submit"
         disabled={pending}
-        className="h-11 w-full rounded-lg bg-accent px-4 text-sm font-black text-white transition hover:opacity-90 disabled:opacity-60"
+            className="h-11 w-full rounded-lg bg-accent px-4 text-sm font-black text-accent-foreground transition hover:opacity-90 disabled:opacity-60"
       >
         {pending ? "Entrando..." : "Entrar no painel"}
       </button>

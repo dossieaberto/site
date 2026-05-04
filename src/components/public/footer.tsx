@@ -10,7 +10,7 @@ export function Footer({ categories, siteName }: { categories: Category[]; siteN
     <footer className="mt-16 border-t border-border bg-surface">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 lg:grid-cols-[1fr_0.9fr_0.75fr_0.75fr] md:px-6">
         <div>
-          <BrandLogo siteName={siteName} />
+          <BrandLogo siteName={siteName} variant="footer" />
           <p className="mt-4 max-w-md text-sm leading-6 text-muted-foreground">{SITE_DESCRIPTION}</p>
           <p className="mt-3 text-sm font-black text-accent">{SITE_TAGLINE}</p>
           <p className="mt-5 text-sm leading-6 text-muted-foreground">

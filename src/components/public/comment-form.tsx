@@ -59,7 +59,7 @@ export function CommentForm({ articleId, articleSlug }: { articleId: string; art
         <button
           type="submit"
           disabled={pending}
-          className="rounded-lg bg-accent px-5 py-3 text-sm font-black text-white transition hover:opacity-90 disabled:opacity-60"
+        className="rounded-lg bg-accent px-5 py-3 text-sm font-black text-accent-foreground transition hover:opacity-90 disabled:opacity-60"
         >
           {pending ? "Enviando..." : "Enviar para moderação"}
         </button>

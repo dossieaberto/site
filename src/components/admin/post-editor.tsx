@@ -128,7 +128,7 @@ export function PostEditor({ article, categories }: { article?: Article | null; 
           <button
             type="submit"
             disabled={pending}
-            className="mt-5 h-11 w-full rounded-lg bg-accent px-4 text-sm font-black text-white hover:opacity-90 disabled:opacity-60"
+        className="mt-5 h-11 w-full rounded-lg bg-accent px-4 text-sm font-black text-accent-foreground hover:opacity-90 disabled:opacity-60"
           >
             {pending ? "Salvando..." : "Salvar notícia"}
           </button>

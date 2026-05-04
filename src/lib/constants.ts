@@ -13,11 +13,11 @@ export const SITE_DESCRIPTION =
   "Dossiê Aberto reúne notícias, análises e bastidores para explicar o contexto por trás dos fatos em política, tecnologia, economia, cultura, Brasil e mundo.";
 
 export const BRAND_PALETTE = {
-  ink: "#111827",
-  paper: "#f5f5f1",
-  dossierRed: "#8f1d2c",
-  deepTeal: "#234e52",
-  graphite: "#2d333b",
+  ink: "#0d1d24",
+  paper: "#f7f5ee",
+  surface: "#fffefa",
+  ochre: "#a87424",
+  graphite: "#172126",
 };
 
 export const CATEGORIES: Category[] = [
