@@ -14,7 +14,7 @@ export default async function AdminPostsPage() {
           <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Notícias</p>
           <h1 className="text-3xl font-black">Gerenciar notícias</h1>
         </div>
-        <Link href="/admin/posts/new" className="rounded-lg bg-accent px-4 py-2 text-sm font-black text-white">
+        <Link href="/admin/posts/new" className="rounded-lg bg-accent px-4 py-2 text-sm font-black text-accent-foreground">
           Nova notícia
         </Link>
       </div>

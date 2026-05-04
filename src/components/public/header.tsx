@@ -14,7 +14,7 @@ export function Header({ categories, siteName }: { categories: Category[]; siteN
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-        <BrandLogo siteName={siteName} />
+        <BrandLogo siteName={siteName} priority />
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Categorias principais">
           {categories.map((category) => (

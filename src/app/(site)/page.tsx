@@ -4,6 +4,7 @@ import { ArticleCard } from "@/components/public/article-card";
 import { CategorySection } from "@/components/public/category-section";
 import { FeaturedArticle } from "@/components/public/featured-article";
 import { NewsletterBox } from "@/components/public/newsletter-box";
+import { LogoSymbol } from "@/components/public/logo-symbol";
 import { PushPrompt } from "@/components/public/push-prompt";
 import { SearchBar } from "@/components/public/search-bar";
 import { EDITORIAL_PILLARS, SITE_DESCRIPTION, SITE_TAGLINE } from "@/lib/constants";
@@ -36,9 +37,10 @@ export default async function HomePage() {
 
       <section className="grid gap-6 py-8 lg:grid-cols-[1fr_360px] lg:items-start">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-accent">
-            {SITE_TAGLINE}
-          </p>
+          <div className="flex items-center gap-3">
+            <LogoSymbol size="lg" priority />
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-accent">{SITE_TAGLINE}</p>
+          </div>
           <h1 className="mt-3 max-w-4xl text-4xl font-black leading-none md:text-6xl">
             Notícias com bastidores, contexto e análise.
           </h1>

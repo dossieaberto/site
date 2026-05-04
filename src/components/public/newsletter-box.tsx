@@ -12,7 +12,7 @@ export function NewsletterBox({ compact = false }: { compact?: boolean }) {
   return (
     <section className="rounded-lg border border-border bg-surface p-5 shadow-sm">
       <div className="flex items-start gap-3">
-        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-white">
+        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
           <Mail aria-hidden size={18} />
         </span>
         <div>
@@ -40,7 +40,7 @@ export function NewsletterBox({ compact = false }: { compact?: boolean }) {
         <button
           type="submit"
           disabled={pending}
-          className="min-h-11 rounded-lg bg-accent px-5 text-sm font-black text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+          className="min-h-11 rounded-lg bg-accent px-5 text-sm font-black text-accent-foreground transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pending ? "Enviando..." : "Cadastrar"}
         </button>

@@ -52,7 +52,7 @@ export function SettingsForm({ settings }: { settings: SiteSettings }) {
       <button
         type="submit"
         disabled={pending}
-        className="rounded-lg bg-accent px-5 py-3 text-sm font-black text-white hover:opacity-90 disabled:opacity-60"
+        className="rounded-lg bg-accent px-5 py-3 text-sm font-black text-accent-foreground hover:opacity-90 disabled:opacity-60"
       >
         {pending ? "Salvando..." : "Salvar configurações"}
       </button>

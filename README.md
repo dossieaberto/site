@@ -31,7 +31,7 @@ O projeto foi organizado para continuar pelo Codex web/app, GitHub, Supabase e V
 - Robots em `/robots.txt`.
 - Open Graph, Twitter Card, canonical e Schema.org NewsArticle.
 - Migrations SQL do Supabase com RLS.
-- Placeholder de favicon e logo textual.
+- Logo/símbolo oficial, favicon e ícones derivados da marca.
 - Espaços reservados para anúncios sem integração real com AdSense.
 
 Sem Supabase configurado, o site público compila com dados mockados. As funções de login, gravação, admin, comentários e newsletter passam a funcionar quando as variáveis do Supabase forem configuradas.
@@ -153,12 +153,30 @@ supabase/
 `-- create-first-admin.sql
 ```
 
+## Identidade Visual
+
+- **Nome oficial:** Dossiê Aberto
+- **Slogan:** O contexto por trás dos fatos.
+- **Símbolo oficial:** `public/brand/dossie-aberto-symbol.png`
+- **Ícones derivados:** `public/icons/favicon.ico`, `public/icons/icon-192.png`, `public/icons/icon-512.png` e `public/icons/apple-touch-icon.png`
+
+O símbolo em `public/brand/dossie-aberto-symbol.png` é o asset principal da marca. Não redesenhe, não substitua por outro símbolo e não inclua o nome completo dentro da imagem sem uma decisão explícita de identidade visual. O arquivo deve permanecer em proporção quadrada e com fundo transparente.
+
+Cores principais aproximadas:
+
+- Grafite/azul-marinho: `#0D1D24`
+- Ocre editorial: `#A87424`
+- Papel neutro: `#F7F5EE`
+- Superfície clara: `#FFFEFA`
+- Fundo escuro: `#10171B`
+
 ## Onde Personalizar A Marca
 
 - Nome, slogan, descrição e paleta: `src/lib/constants.ts`
 - Cores globais: `src/app/globals.css`
-- Logo textual: `src/components/public/brand-logo.tsx`
-- Favicon placeholder: `src/app/icon.svg`
+- Símbolo oficial: `public/brand/dossie-aberto-symbol.png`
+- Componentes de marca: `src/components/public/brand-logo.tsx`, `src/components/public/logo-symbol.tsx` e `src/components/public/site-identity.tsx`
+- Favicon e ícones: `public/icons/`
 - Textos da home: `src/app/(site)/page.tsx`
 - Configurações editáveis pelo admin: `/admin/settings`
 

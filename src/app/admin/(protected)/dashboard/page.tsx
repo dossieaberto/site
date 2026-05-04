@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { StatusBadge } from "@/components/admin/status-badge";
+import { LogoSymbol } from "@/components/public/logo-symbol";
+import { SITE_TAGLINE } from "@/lib/constants";
 import { getDashboardStats } from "@/lib/data/admin";
 import { formatDateTime } from "@/lib/utils";
 
@@ -16,11 +18,15 @@ export default async function AdminDashboardPage() {
   return (
     <div>
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Dashboard</p>
-          <h1 className="text-3xl font-black">Visão geral</h1>
+        <div className="flex items-center gap-3">
+          <LogoSymbol size="md" />
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Dashboard</p>
+            <h1 className="text-3xl font-black">Visão geral</h1>
+            <p className="mt-1 text-sm text-muted-foreground">{SITE_TAGLINE}</p>
+          </div>
         </div>
-        <Link href="/admin/posts/new" className="rounded-lg bg-accent px-4 py-2 text-sm font-black text-white">
+        <Link href="/admin/posts/new" className="rounded-lg bg-accent px-4 py-2 text-sm font-black text-accent-foreground">
           Criar notícia
         </Link>
       </div>

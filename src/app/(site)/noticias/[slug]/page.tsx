@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = article.seoTitle || article.title;
   const description = article.seoDescription || article.excerpt;
   const url = getArticleUrl(article.slug);
-  const image = article.ogImage || article.coverImage || absoluteUrl("/icon.svg");
+  const image = article.ogImage || article.coverImage || absoluteUrl("/icons/icon-512.png");
 
   return {
     title,
@@ -79,7 +79,7 @@ export default async function ArticlePage({ params }: PageProps) {
     "@type": "NewsArticle",
     headline: article.title,
     description: article.excerpt,
-    image: article.ogImage || article.coverImage || absoluteUrl("/icon.svg"),
+    image: article.ogImage || article.coverImage || absoluteUrl("/icons/icon-512.png"),
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
     author: {
@@ -92,7 +92,7 @@ export default async function ArticlePage({ params }: PageProps) {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: absoluteUrl("/icon.svg"),
+        url: absoluteUrl("/brand/dossie-aberto-symbol.png"),
       },
     },
     mainEntityOfPage: articleUrl,

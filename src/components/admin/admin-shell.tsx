@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { FileText, LayoutDashboard, MessageSquare, Newspaper, Settings, Users } from "lucide-react";
+import { LayoutDashboard, MessageSquare, Newspaper, Settings, Users } from "lucide-react";
 import { logoutAdmin } from "@/app/actions/admin-auth";
 import { BrandLogo } from "@/components/public/brand-logo";
+import { LogoSymbol } from "@/components/public/logo-symbol";
 import { SITE_NAME } from "@/lib/constants";
 import type { Author } from "@/types/content";
 
@@ -18,7 +19,7 @@ export function AdminShell({ children, admin }: { children: React.ReactNode; adm
     <div className="min-h-screen bg-background text-foreground lg:grid lg:grid-cols-[280px_1fr]">
       <aside className="border-b border-border bg-surface lg:min-h-screen lg:border-b-0 lg:border-r">
         <div className="px-4 py-5">
-          <BrandLogo siteName={SITE_NAME} />
+          <BrandLogo siteName={SITE_NAME} variant="admin" />
         </div>
         <nav className="grid gap-1 px-3 pb-4" aria-label="Admin">
           {navItems.map((item) => {
@@ -40,11 +41,9 @@ export function AdminShell({ children, admin }: { children: React.ReactNode; adm
       <div>
         <header className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-surface px-4 py-4 md:px-6">
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-muted">
-              <FileText aria-hidden size={18} />
-            </span>
+            <LogoSymbol size="sm" />
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-accent">Painel admin</p>
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-accent">Painel editorial</p>
               <p className="text-sm font-semibold text-muted-foreground">{admin.fullName}</p>
             </div>
           </div>

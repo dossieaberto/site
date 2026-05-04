@@ -14,7 +14,7 @@ export default function AdminLoginPage() {
   return (
     <main className="flex min-h-screen items-center justify-center px-4 py-10">
       <section className="w-full max-w-md rounded-lg border border-border bg-surface p-6 shadow-sm">
-        <BrandLogo siteName={SITE_NAME} />
+        <BrandLogo siteName={SITE_NAME} variant="admin" />
         <h1 className="mt-8 text-3xl font-black">Entrar no painel</h1>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">
           Acesso restrito a usuários com role de administrador no Supabase.
