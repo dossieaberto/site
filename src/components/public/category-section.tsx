@@ -6,14 +6,15 @@ export function CategorySection({ category, articles }: { category: Category; ar
   if (!articles.length) return null;
 
   return (
-    <section className="mt-12">
-      <div className="mb-4 flex items-end justify-between gap-4 border-b border-border pb-3">
+    <section className="mt-14">
+      <div className="mb-5 flex items-end justify-between gap-4 border-b border-foreground/20 pb-4">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Editorias</p>
-          <h2 className="text-2xl font-black">{category.name}</h2>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Editoria</p>
+          <h2 className="font-serif text-3xl font-black">{category.name}</h2>
+          <p className="mt-1 max-w-2xl text-sm leading-6 text-muted-foreground">{category.description}</p>
         </div>
         <Link href={`/${category.slug}`} className="text-sm font-black text-muted-foreground hover:text-accent">
-          Ver mais
+          Ver editoria
         </Link>
       </div>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

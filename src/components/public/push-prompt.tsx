@@ -14,30 +14,30 @@ export function PushPrompt() {
 
     const permission = await Notification.requestPermission();
     if (permission !== "granted") {
-      setMessage("Permissão não concedida.");
+      setMessage("Tudo bem. Você pode seguir acompanhando as matérias pelo site.");
       return;
     }
 
-    setMessage("Permissão concedida. A inscrição será ativada quando as chaves VAPID forem configuradas.");
+    setMessage("Permissão concedida. O envio será ativado quando as notificações forem configuradas.");
   }
 
   return (
-    <section className="rounded-lg border border-border bg-surface p-5">
+    <section className="border border-border bg-surface p-5">
       <div className="flex items-start gap-3">
         <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-white">
           <Bell aria-hidden size={18} />
         </span>
         <div>
-          <h2 className="text-lg font-black">Alertas de novas matérias</h2>
+          <h2 className="font-serif text-xl font-black">Alertas editoriais</h2>
           <p className="mt-1 text-sm leading-6 text-muted-foreground">
-            Estrutura inicial para notificações push. O envio real depende das chaves VAPID no ambiente.
+            Receba aviso quando uma matéria importante for publicada. O envio ainda depende da configuração final.
           </p>
         </div>
       </div>
       <button
         type="button"
         onClick={requestPermission}
-        className="mt-4 rounded-lg border border-border px-4 py-2 text-sm font-black hover:border-secondary hover:text-secondary"
+        className="mt-4 border border-border px-4 py-2 text-sm font-black hover:border-secondary hover:text-secondary"
       >
         Permitir notificações
       </button>

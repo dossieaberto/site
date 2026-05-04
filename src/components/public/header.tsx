@@ -21,7 +21,7 @@ export function Header({ categories, siteName }: { categories: Category[]; siteN
             <Link
               key={category.slug}
               href={`/${category.slug}`}
-              className="rounded-full px-3 py-2 text-sm font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground"
+              className="px-3 py-2 text-sm font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground"
             >
               {category.name}
             </Link>
@@ -37,7 +37,7 @@ export function Header({ categories, siteName }: { categories: Category[]; siteN
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center border border-border bg-surface lg:hidden"
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             aria-expanded={open}
           >
@@ -55,7 +55,7 @@ export function Header({ categories, siteName }: { categories: Category[]; siteN
                 key={category.slug}
                 href={`/${category.slug}`}
                 onClick={() => setOpen(false)}
-                className="rounded-lg border border-border bg-surface px-3 py-3 text-sm font-bold"
+                className="border border-border bg-surface px-3 py-3 text-sm font-bold"
               >
                 {category.name}
               </Link>

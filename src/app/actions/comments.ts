@@ -39,12 +39,12 @@ export async function submitComment(
   if (!isSupabaseConfigured) {
     return {
       ok: false,
-      message: "Comentários prontos. Configure o Supabase para salvar moderação real.",
+      message: "Os comentários ainda não estão recebendo envios neste ambiente.",
     };
   }
 
   const supabase = await createServerSupabaseClient();
-  if (!supabase) return { ok: false, message: "Supabase não configurado." };
+  if (!supabase) return { ok: false, message: "Não foi possível registrar o comentário agora." };
 
   const { articleId, articleSlug, name, email, body } = parsed.data;
   const { error } = await supabase.from("comments").insert({
@@ -56,12 +56,12 @@ export async function submitComment(
   });
 
   if (error) {
-    return { ok: false, message: "Não foi possível enviar o comentário agora." };
+    return { ok: false, message: "Não conseguimos enviar o comentário agora. Tente novamente em instantes." };
   }
 
   revalidatePath(`/noticias/${articleSlug}`);
   return {
     ok: true,
-    message: "Comentário enviado para moderação. Ele aparecerá após aprovação.",
+    message: "Comentário recebido. Ele será lido pela moderação antes de aparecer na matéria.",
   };
 }

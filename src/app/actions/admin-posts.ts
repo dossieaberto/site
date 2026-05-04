@@ -84,7 +84,7 @@ export async function savePostAction(
   const admin = await requireAdmin();
 
   if (!isSupabaseConfigured) {
-    return { ok: false, message: "Configure o Supabase para salvar notícias." };
+    return { ok: false, message: "Configure o Supabase para salvar matérias." };
   }
 
   const parsed = postSchema.safeParse({
@@ -111,7 +111,7 @@ export async function savePostAction(
   }
 
   const supabase = await createServerSupabaseClient();
-  if (!supabase) return { ok: false, message: "Supabase não configurado." };
+  if (!supabase) return { ok: false, message: "Não foi possível abrir a conexão com o banco." };
 
   const articleSlug = slugify(parsed.data.slug || parsed.data.title);
   const uploadedCover = await uploadCoverImage(formData.get("coverFile") as File | null, articleSlug);
@@ -146,7 +146,7 @@ export async function savePostAction(
         .single();
 
   if (error || !data) {
-    return { ok: false, message: error?.message || "Não foi possível salvar a notícia." };
+    return { ok: false, message: error?.message || "Não foi possível salvar a matéria." };
   }
 
   await syncTags(data.id, parsed.data.tags);

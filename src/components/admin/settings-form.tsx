@@ -10,7 +10,7 @@ export function SettingsForm({ settings }: { settings: SiteSettings }) {
   const [state, formAction, pending] = useActionState(saveSettingsAction, initialState);
 
   return (
-    <form action={formAction} className="max-w-3xl space-y-5 rounded-lg border border-border bg-surface p-5">
+    <form action={formAction} className="max-w-3xl space-y-5 border border-border bg-surface p-5">
       {[
         ["site_name", "Nome do site"],
         ["site_description", "Descrição do site"],
@@ -30,14 +30,14 @@ export function SettingsForm({ settings }: { settings: SiteSettings }) {
               name={name}
               defaultValue={settings[name as keyof SiteSettings]}
               rows={3}
-              className="mt-2 w-full rounded-lg border border-border bg-background px-3 py-3 text-sm outline-none focus:border-accent"
+              className="mt-2 w-full border border-border bg-background px-3 py-3 text-sm outline-none focus:border-accent"
             />
           ) : (
             <input
               id={name}
               name={name}
               defaultValue={settings[name as keyof SiteSettings]}
-              className="mt-2 h-11 w-full rounded-lg border border-border bg-background px-3 text-sm outline-none focus:border-accent"
+              className="mt-2 h-11 w-full border border-border bg-background px-3 text-sm outline-none focus:border-accent"
             />
           )}
         </div>
@@ -52,7 +52,7 @@ export function SettingsForm({ settings }: { settings: SiteSettings }) {
       <button
         type="submit"
         disabled={pending}
-        className="rounded-lg bg-accent px-5 py-3 text-sm font-black text-white hover:opacity-90 disabled:opacity-60"
+        className="bg-accent px-5 py-3 text-sm font-black text-accent-foreground hover:opacity-90 disabled:opacity-60"
       >
         {pending ? "Salvando..." : "Salvar configurações"}
       </button>

@@ -1,6 +1,6 @@
 # Dossiê Aberto
 
-Site jornalístico/blog de notícias em português do Brasil.
+Site jornalístico/blog de notícias em português do Brasil, com foco em fatos públicos, bastidores e contexto.
 
 - **Nome:** Dossiê Aberto
 - **Slogan:** O contexto por trás dos fatos.
@@ -11,7 +11,7 @@ O projeto foi organizado para continuar pelo Codex web/app, GitHub, Supabase e V
 ## O Que Está Incluído
 
 - Site público de notícias com layout mobile-first.
-- Home com manchete, últimas notícias, editorias, mais lidas, busca visual, newsletter, push prompt e espaços de anúncio.
+- Home com manchete, leituras recentes, editorias, mais consultadas, busca visual, newsletter, push prompt e espaços de anúncio.
 - Página de notícia por slug em `/noticias/[slug]`.
 - Categorias em `/politica`, `/tecnologia`, `/economia`, `/cultura`, `/brasil` e `/mundo`.
 - Tags em `/tag/[slug]`.
@@ -21,7 +21,7 @@ O projeto foi organizado para continuar pelo Codex web/app, GitHub, Supabase e V
 - Newsletter com prevenção de duplicidade via Supabase.
 - Painel admin em `/admin`.
 - Login admin via Supabase Auth em `/admin/login`.
-- CRUD de notícias com Markdown, preview, upload de imagem e campos SEO.
+- CRUD de matérias com Markdown, prévia, upload de imagem e campos SEO.
 - Moderação de comentários em `/admin/comments`.
 - Newsletter admin com exportação CSV.
 - Configurações básicas do site.

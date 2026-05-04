@@ -14,8 +14,8 @@ export function Footer({ categories, siteName }: { categories: Category[]; siteN
           <p className="mt-4 max-w-md text-sm leading-6 text-muted-foreground">{SITE_DESCRIPTION}</p>
           <p className="mt-3 text-sm font-black text-accent">{SITE_TAGLINE}</p>
           <p className="mt-5 text-sm leading-6 text-muted-foreground">
-            Jornalismo de bastidor, contexto e análise para acompanhar decisões públicas, tecnologia,
-            economia, cultura, Brasil e mundo.
+            Um projeto editorial independente em desenvolvimento, dedicado a acompanhar fatos públicos,
+            interesses em jogo e consequências para a sociedade.
           </p>
         </div>
 

@@ -29,16 +29,16 @@ export const INSTITUTIONAL_PAGES: InstitutionalPageContent[] = [
     navLabel: "Sobre",
     title: "Sobre o Dossiê Aberto",
     description:
-      "Conheça a proposta editorial do Dossiê Aberto, um blog jornalístico em português do Brasil com foco em fatos, bastidores e contexto.",
+      "Conheça a proposta editorial do Dossiê Aberto, um projeto jornalístico independente em português do Brasil.",
     kicker: "Quem somos",
-    lead: "O Dossiê Aberto é um blog jornalístico criado para acompanhar os fatos relevantes do Brasil e do mundo com clareza, contexto e responsabilidade editorial.",
+    lead: "O Dossiê Aberto é um projeto editorial independente em desenvolvimento, criado para acompanhar fatos públicos com contexto, sobriedade e responsabilidade.",
     updatedAt: "2026-05-04",
     sections: [
       {
         heading: "Nossa proposta",
         body: [
-          "O jornal nasce com a ideia de abrir o dossiê dos acontecimentos: separar fatos verificados, bastidores relevantes e explicações que ajudam o leitor a entender o que está em jogo.",
-          "Cobrimos política, tecnologia, economia, cultura, Brasil e mundo com linguagem acessível, sem abrir mão de rigor, transparência e independência editorial.",
+          "A proposta é abrir o dossiê dos acontecimentos sem teatralizar a notícia: separar fatos, bastidores relevantes e explicações que ajudem o leitor a entender o que está em jogo.",
+          "Cobrimos política, tecnologia, economia, cultura, Brasil e mundo com linguagem acessível, atenção a fontes e separação clara entre informação, análise e opinião.",
         ],
       },
       {
@@ -56,7 +56,7 @@ export const INSTITUTIONAL_PAGES: InstitutionalPageContent[] = [
       {
         heading: "Compromisso com o leitor",
         body: [
-          "O Dossiê Aberto não pretende parecer neutro por omissão. O compromisso é com apuração honesta, correção de erros, transparência sobre limites de informação e respeito ao leitor.",
+          "O Dossiê Aberto não promete onisciência nem falsa neutralidade. O compromisso é com apuração honesta, correção de erros, transparência sobre limites de informação e respeito ao leitor.",
         ],
       },
     ],
@@ -99,7 +99,7 @@ export const INSTITUTIONAL_PAGES: InstitutionalPageContent[] = [
     ],
     callout: {
       title: "Canal público",
-      body: "O e-mail oficial de contato deve ser definido nas configurações do site antes da divulgação pública ampla.",
+      body: "Enquanto o projeto amadurece, o canal oficial de contato deve ser definido nas configurações do site antes da divulgação pública ampla.",
     },
   },
   {
@@ -109,7 +109,7 @@ export const INSTITUTIONAL_PAGES: InstitutionalPageContent[] = [
     description:
       "Entenda como o Dossiê Aberto trata dados de leitores, comentários, newsletter, preferências de tema e informações técnicas de navegação.",
     kicker: "Privacidade",
-    lead: "Esta política explica, em linguagem direta, quais dados podem ser coletados no Dossiê Aberto e como eles devem ser usados para operar o site com segurança.",
+    lead: "Esta política explica, em linguagem direta, quais dados podem ser coletados e como eles devem ser usados para operar o site com segurança e respeito ao leitor.",
     updatedAt: "2026-05-04",
     sections: [
       {
@@ -149,7 +149,7 @@ export const INSTITUTIONAL_PAGES: InstitutionalPageContent[] = [
     ],
     callout: {
       title: "Transparência",
-      body: "Esta página deve ser revisada sempre que novas ferramentas de análise, publicidade, envio de e-mails ou notificações forem integradas.",
+      body: "Esta página deve ser revisada sempre que ferramentas de análise, publicidade, envio de e-mails ou notificações forem integradas ao site.",
     },
   },
   {

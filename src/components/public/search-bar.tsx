@@ -17,7 +17,7 @@ export function SearchBar({ compact = false }: { compact?: boolean }) {
   return (
     <form
       onSubmit={onSubmit}
-      className="flex w-full items-center gap-2 rounded-full border border-border bg-surface px-3 py-2 shadow-sm"
+      className="flex w-full items-center gap-2 border border-border bg-surface px-3 py-2"
       role="search"
     >
       <Search aria-hidden size={18} className="text-muted-foreground" />
@@ -28,12 +28,12 @@ export function SearchBar({ compact = false }: { compact?: boolean }) {
         id={compact ? "search-compact" : "search"}
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="Buscar notícias"
+        placeholder={compact ? "Buscar" : "Busque por tema, nome, decisão ou bastidor"}
         className="min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
       />
       <button
         type="submit"
-        className="rounded-full bg-foreground px-3 py-1.5 text-xs font-bold text-background transition hover:bg-accent hover:text-accent-foreground"
+        className="bg-foreground px-3 py-1.5 text-xs font-bold text-background transition hover:bg-accent hover:text-accent-foreground"
       >
         Buscar
       </button>

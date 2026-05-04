@@ -8,14 +8,14 @@ export function BrandLogo({ siteName, compact = false }: { siteName: string; com
       <span
         aria-hidden
         className={cn(
-          "flex shrink-0 items-center justify-center rounded-md bg-foreground text-background shadow-sm",
+          "flex shrink-0 items-center justify-center border border-foreground bg-foreground text-background",
           compact ? "h-9 w-9 text-lg" : "h-11 w-11 text-xl",
         )}
       >
-        <span className="font-black leading-none">DA</span>
+        <span className="font-serif font-black leading-none">DA</span>
       </span>
       <span className="min-w-0">
-        <span className="block truncate text-2xl font-black leading-none text-foreground group-hover:text-accent">
+        <span className="block truncate font-serif text-2xl font-black leading-none text-foreground group-hover:text-accent">
           {siteName}
         </span>
         {!compact ? (

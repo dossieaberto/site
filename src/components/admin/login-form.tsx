@@ -19,7 +19,7 @@ export function LoginForm() {
           name="email"
           type="email"
           required
-          className="mt-2 h-11 w-full rounded-lg border border-border bg-background px-3 text-sm outline-none focus:border-accent"
+          className="mt-2 h-11 w-full border border-border bg-background px-3 text-sm outline-none focus:border-accent"
         />
       </div>
       <div>
@@ -31,14 +31,14 @@ export function LoginForm() {
           name="password"
           type="password"
           required
-          className="mt-2 h-11 w-full rounded-lg border border-border bg-background px-3 text-sm outline-none focus:border-accent"
+          className="mt-2 h-11 w-full border border-border bg-background px-3 text-sm outline-none focus:border-accent"
         />
       </div>
       {state.message ? <p className="text-sm font-semibold text-accent">{state.message}</p> : null}
       <button
         type="submit"
         disabled={pending}
-        className="h-11 w-full rounded-lg bg-accent px-4 text-sm font-black text-white transition hover:opacity-90 disabled:opacity-60"
+        className="h-11 w-full bg-accent px-4 text-sm font-black text-accent-foreground transition hover:opacity-90 disabled:opacity-60"
       >
         {pending ? "Entrando..." : "Entrar no painel"}
       </button>
