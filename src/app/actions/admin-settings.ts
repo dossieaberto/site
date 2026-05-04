@@ -41,7 +41,7 @@ export async function saveSettingsAction(
   }
 
   const supabase = await createServerSupabaseClient();
-  if (!supabase) return { ok: false, message: "Supabase não configurado." };
+  if (!supabase) return { ok: false, message: "Não foi possível abrir a conexão com o banco." };
 
   const rows = Object.entries(parsed.data).map(([key, value]) => ({
     key,
@@ -53,5 +53,5 @@ export async function saveSettingsAction(
   if (error) return { ok: false, message: "Não foi possível salvar as configurações." };
 
   revalidatePath("/");
-  return { ok: true, message: "Configurações salvas." };
+  return { ok: true, message: "Configurações editoriais salvas." };
 }

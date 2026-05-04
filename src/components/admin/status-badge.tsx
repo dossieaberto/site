@@ -10,8 +10,15 @@ const labels: Record<Article["status"] | CommentStatus, string> = {
 };
 
 export function StatusBadge({ status }: { status: Article["status"] | CommentStatus }) {
+  const tone =
+    status === "published" || status === "approved"
+      ? "border-secondary/40 text-secondary"
+      : status === "pending" || status === "draft"
+        ? "border-border text-muted-foreground"
+        : "border-accent/40 text-accent";
+
   return (
-    <span className="inline-flex rounded-full border border-border bg-muted px-2.5 py-1 text-xs font-black">
+    <span className={`inline-flex rounded-full border bg-background px-2.5 py-1 text-xs font-black ${tone}`}>
       {labels[status]}
     </span>
   );

@@ -6,8 +6,8 @@ import { SITE_NAME } from "@/lib/constants";
 import type { Author } from "@/types/content";
 
 const navItems = [
-  { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/admin/posts", label: "Notícias", icon: Newspaper },
+  { href: "/admin/dashboard", label: "Mesa editorial", icon: LayoutDashboard },
+  { href: "/admin/posts", label: "Matérias", icon: Newspaper },
   { href: "/admin/comments", label: "Comentários", icon: MessageSquare },
   { href: "/admin/newsletter", label: "Newsletter", icon: Users },
   { href: "/admin/settings", label: "Configurações", icon: Settings },
@@ -44,7 +44,7 @@ export function AdminShell({ children, admin }: { children: React.ReactNode; adm
               <FileText aria-hidden size={18} />
             </span>
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-accent">Painel admin</p>
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-accent">Redação</p>
               <p className="text-sm font-semibold text-muted-foreground">{admin.fullName}</p>
             </div>
           </div>

@@ -23,19 +23,19 @@ function tags(...slugs: string[]) {
 export const MOCK_ARTICLES: Article[] = [
   {
     id: "1",
-    title: "Congresso abre semana com votação decisiva sobre o orçamento",
-    slug: "congresso-abre-semana-com-votacao-decisiva-sobre-o-orcamento",
+    title: "Como decisões em Brasília redesenham a disputa pelo orçamento",
+    slug: "como-decisoes-em-brasilia-redesenham-a-disputa-pelo-orcamento",
     excerpt:
-      "Articulação entre governo e lideranças do Legislativo deve definir o calendário econômico dos próximos meses.",
+      "A negociação em torno de prioridades fiscais expõe a força do Congresso e os limites de articulação do governo.",
     content: `## O que está em jogo
 
-A semana política começa sob expectativa de votações que podem redefinir prioridades do orçamento federal. Lideranças partidárias negociam ajustes no texto e buscam acordo para evitar novos adiamentos.
+As negociações sobre o orçamento costumam revelar mais do que a disputa por números. Elas mostram quem consegue impor prioridades, quais áreas ganham proteção política e onde o governo aceita recuar para preservar governabilidade.
 
-Integrantes do governo defendem que a proposta dá previsibilidade para investimentos essenciais. Parlamentares, por outro lado, cobram maior detalhamento sobre a execução das despesas.
+Nos bastidores, lideranças partidárias pressionam por previsibilidade na execução de recursos, enquanto integrantes do Executivo tentam manter margem para organizar a agenda econômica.
 
-> O ponto central é entender como a decisão muda o espaço fiscal e a agenda de estados e municípios.
+> O orçamento é também uma leitura de poder: indica quem negocia, quem cede e quem paga o custo político das escolhas.
 
-A votação deve movimentar comissões e plenários nos próximos dias. O resultado também será observado pelo mercado, por governadores e por prefeitos que aguardam a liberação de recursos.`,
+A decisão final tende a influenciar a relação com estados, municípios, setores econômicos e bancadas temáticas. É nesse entorno, mais do que no placar isolado, que a semana política deve ser observada.`,
     coverImage:
       "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=80",
     ogImage:
@@ -49,22 +49,22 @@ A votação deve movimentar comissões e plenários nos próximos dias. O result
     updatedAt: "2026-05-03T09:00:00-03:00",
     readingTimeMinutes: 3,
     isFeatured: true,
-    seoTitle: "Congresso abre semana com votação decisiva sobre o orçamento",
+    seoTitle: "Como decisões em Brasília redesenham a disputa pelo orçamento",
     seoDescription:
-      "Entenda os bastidores da votação do orçamento e os efeitos possíveis para a agenda econômica.",
+      "Entenda os bastidores da disputa orçamentária e seus efeitos políticos e econômicos.",
     views: 320,
   },
   {
     id: "2",
-    title: "Empresas brasileiras aceleram adoção de inteligência artificial",
-    slug: "empresas-brasileiras-aceleram-adocao-de-inteligencia-artificial",
+    title: "A inteligência artificial entra no centro do debate regulatório",
+    slug: "a-inteligencia-artificial-entra-no-centro-do-debate-regulatorio",
     excerpt:
-      "Relatórios de mercado apontam aumento de investimentos em automação, atendimento digital e análise de dados.",
-    content: `Empresas de diferentes setores ampliaram projetos com inteligência artificial para reduzir custos, personalizar atendimento e melhorar a leitura de dados internos.
+      "A expansão de ferramentas automatizadas pressiona empresas, governos e sociedade a discutir limites, riscos e responsabilidade.",
+    content: `A inteligência artificial deixou de ser tema restrito a laboratórios e passou a ocupar reuniões de empresas, gabinetes públicos e órgãos reguladores.
 
-A maior parte das iniciativas ainda está em fase de teste, mas consultorias apontam que a tecnologia já virou pauta recorrente em reuniões de diretoria.
+O debate envolve produtividade, proteção de dados, transparência de decisões automatizadas e efeitos sobre o trabalho. A tecnologia avança rápido, mas a governança ainda tenta encontrar linguagem comum.
 
-Especialistas alertam que governança, segurança e capacitação das equipes devem acompanhar a velocidade de adoção.`,
+Para empresas, a questão não é apenas adotar ferramentas. É explicar como elas são usadas, quem responde por erros e quais dados sustentam os sistemas.`,
     coverImage:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80",
     ogImage:
@@ -82,15 +82,15 @@ Especialistas alertam que governança, segurança e capacitação das equipes de
   },
   {
     id: "3",
-    title: "Mercado financeiro revisa projeções para inflação e juros",
-    slug: "mercado-financeiro-revisa-projecoes-para-inflacao-e-juros",
+    title: "O que novos indicadores dizem sobre consumo e renda",
+    slug: "o-que-novos-indicadores-dizem-sobre-consumo-e-renda",
     excerpt:
-      "Analistas acompanham sinais do consumo, crédito e contas públicas antes das próximas decisões de política monetária.",
-    content: `Instituições financeiras ajustaram estimativas para inflação e juros diante de novos indicadores de atividade econômica.
+      "A leitura dos dados econômicos exige separar melhora pontual, pressão de preços e sinais persistentes no orçamento das famílias.",
+    content: `Indicadores de consumo e renda costumam ser lidos como fotografias rápidas da economia, mas ganham sentido quando vistos em sequência.
 
-O consumo das famílias segue no centro das análises, assim como a evolução do crédito e o comportamento dos preços de alimentos e serviços.
+O comportamento do crédito, a composição das despesas e a dinâmica dos serviços ajudam a explicar se a recuperação chega ao cotidiano ou fica concentrada em setores específicos.
 
-A autoridade monetária deve avaliar esse conjunto de dados antes da próxima decisão sobre a taxa básica de juros.`,
+Para o leitor, a pergunta central é simples: quanto do cenário aparece no salário, no supermercado, no financiamento e nas decisões de consumo.`,
     coverImage:
       "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80",
     ogImage:
@@ -108,15 +108,15 @@ A autoridade monetária deve avaliar esse conjunto de dados antes da próxima de
   },
   {
     id: "4",
-    title: "Mostra nacional leva filmes independentes a capitais brasileiras",
-    slug: "mostra-nacional-leva-filmes-independentes-a-capitais-brasileiras",
+    title: "A cultura digital muda a forma como o público acompanha política",
+    slug: "a-cultura-digital-muda-a-forma-como-o-publico-acompanha-politica",
     excerpt:
-      "Circuito cultural valoriza produções regionais e amplia debates sobre financiamento audiovisual no país.",
-    content: `Uma mostra itinerante de cinema independente vai circular por capitais brasileiras com sessões comentadas, debates e oficinas.
+      "Memes, vídeos curtos e transmissões ao vivo transformam disputas públicas em linguagem cotidiana, veloz e fragmentada.",
+    content: `A política deixou de depender apenas do discurso oficial, da entrevista e da nota pública. Parte importante da disputa por atenção acontece em formatos culturais nativos da internet.
 
-A programação destaca produções regionais e obras que tiveram trajetória relevante em festivais nacionais.
+Vídeos curtos, cortes de debates, memes e transmissões ao vivo aproximam temas institucionais de públicos que nem sempre acompanham a cobertura tradicional.
 
-Organizadores defendem que a circulação de filmes fora do eixo comercial amplia o acesso do público a novas narrativas.`,
+Essa transformação amplia o acesso, mas também comprime contexto. O desafio editorial é acompanhar a linguagem sem abandonar apuração e memória.`,
     coverImage:
       "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80",
     ogImage:
@@ -134,15 +134,15 @@ Organizadores defendem que a circulação de filmes fora do eixo comercial ampli
   },
   {
     id: "5",
-    title: "Estados ampliam programas de recomposição da aprendizagem",
-    slug: "estados-ampliam-programas-de-recomposicao-da-aprendizagem",
+    title: "Estados ampliam pressão por respostas em segurança pública",
+    slug: "estados-ampliam-pressao-por-respostas-em-seguranca-publica",
     excerpt:
-      "Secretarias de educação apostam em reforço escolar, avaliações diagnósticas e formação de professores.",
-    content: `Redes estaduais de ensino passaram a reforçar programas de recomposição da aprendizagem para reduzir defasagens acumuladas nos últimos anos.
+      "Governadores buscam mais coordenação, recursos e instrumentos de gestão para lidar com um tema que atravessa fronteiras locais.",
+    content: `A segurança pública voltou ao centro da agenda dos estados com cobranças por integração de dados, financiamento estável e coordenação entre esferas de governo.
 
-As ações incluem avaliações diagnósticas, aulas de reforço, material complementar e formação continuada para professores.
+O tema combina polícia, inteligência, sistema prisional, prevenção social e disputa política. Por isso, respostas simples raramente sustentam resultados duradouros.
 
-Gestores afirmam que o desafio é manter acompanhamento individual sem sobrecarregar escolas e equipes pedagógicas.`,
+Nos bastidores, a pressão é por medidas visíveis no curto prazo sem abandonar reformas de gestão que costumam avançar lentamente.`,
     coverImage:
       "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=80",
     ogImage:
@@ -160,15 +160,15 @@ Gestores afirmam que o desafio é manter acompanhamento individual sem sobrecarr
   },
   {
     id: "6",
-    title: "Líderes globais discutem nova rodada de acordos climáticos",
-    slug: "lideres-globais-discutem-nova-rodada-de-acordos-climaticos",
+    title: "Eleições no exterior reacendem disputa por influência global",
+    slug: "eleicoes-no-exterior-reacendem-disputa-por-influencia-global",
     excerpt:
-      "Negociações internacionais buscam alinhar financiamento, metas de redução de emissões e segurança energética.",
-    content: `Representantes de diferentes países iniciaram uma nova rodada de conversas sobre financiamento climático e transição energética.
+      "Mudanças políticas fora do Brasil reposicionam alianças, comércio, tecnologia e agendas diplomáticas acompanhadas por governos e empresas.",
+    content: `Eleições em outros países raramente ficam restritas às suas fronteiras. Mudanças de governo podem alterar negociações comerciais, estratégias de defesa, regulação tecnológica e alianças diplomáticas.
 
-O debate envolve metas de redução de emissões, proteção de florestas, infraestrutura resiliente e apoio a economias vulneráveis.
+Para países emergentes, a atenção recai sobre financiamento, cadeias produtivas, energia e acordos multilaterais. Cada resultado abre ou fecha espaço para novos alinhamentos.
 
-Apesar do tom diplomático, negociadores reconhecem divergências sobre prazos, responsabilidades e fontes de financiamento.`,
+O acompanhamento internacional exige separar gesto eleitoral, promessa de campanha e capacidade real de mudança institucional.`,
     coverImage:
       "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1400&q=80",
     ogImage:

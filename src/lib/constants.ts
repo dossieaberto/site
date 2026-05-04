@@ -10,14 +10,14 @@ export const SITE_TAGLINE =
 
 export const SITE_DESCRIPTION =
   process.env.NEXT_PUBLIC_SITE_DESCRIPTION ||
-  "Dossiê Aberto reúne notícias, análises e bastidores para explicar o contexto por trás dos fatos em política, tecnologia, economia, cultura, Brasil e mundo.";
+  "Notícias, bastidores e análise para entender os fatos públicos além da superfície, com atenção a política, tecnologia, economia, cultura, Brasil e mundo.";
 
 export const BRAND_PALETTE = {
-  ink: "#111827",
-  paper: "#f5f5f1",
-  dossierRed: "#8f1d2c",
-  deepTeal: "#234e52",
-  graphite: "#2d333b",
+  ink: "#171615",
+  paper: "#f7f5ef",
+  dossierRed: "#7a2635",
+  deepTeal: "#1f4a46",
+  warmGray: "#ece7dd",
 };
 
 export const CATEGORIES: Category[] = [
@@ -25,48 +25,54 @@ export const CATEGORIES: Category[] = [
     id: "politica",
     name: "Política",
     slug: "politica",
-    description: "Decisões públicas, bastidores de poder e debates institucionais.",
+    description: "Poder, instituições, eleições, bastidores e decisões públicas que reorganizam a vida nacional.",
   },
   {
     id: "tecnologia",
     name: "Tecnologia",
     slug: "tecnologia",
-    description: "Inovação, internet, inteligência artificial e mercado digital.",
+    description: "Plataformas, inteligência artificial, regulação, inovação e seus efeitos sociais e econômicos.",
   },
   {
     id: "economia",
     name: "Economia",
     slug: "economia",
-    description: "Mercado, trabalho, finanças públicas e vida econômica.",
+    description: "Mercado, trabalho, empresas, consumo e decisões que chegam ao bolso do leitor.",
   },
   {
     id: "cultura",
     name: "Cultura",
     slug: "cultura",
-    description: "Livros, música, cinema, artes e comportamento.",
+    description: "Ideias, comportamento, artes, entretenimento e as disputas simbólicas do cotidiano.",
   },
   {
     id: "brasil",
     name: "Brasil",
     slug: "brasil",
-    description: "Notícias nacionais, cidades, educação, saúde e sociedade.",
+    description: "Acontecimentos nacionais, sociedade, estados e temas públicos fora do eixo mais óbvio.",
   },
   {
     id: "mundo",
     name: "Mundo",
     slug: "mundo",
-    description: "Cenário internacional, diplomacia, conflitos e tendências globais.",
+    description: "Geopolítica, conflitos, eleições, economia global e disputas por influência internacional.",
   },
 ];
 
 export const EDITORIAL_PILLARS = ["Bastidores", "Contexto", "Análise"];
+
+export const EDITORIAL_PILLAR_COPY: Record<(typeof EDITORIAL_PILLARS)[number], string> = {
+  Bastidores: "O que circula antes das decisões públicas chegarem ao plenário, ao mercado ou à rua.",
+  Contexto: "As conexões que explicam por que uma notícia importa e quais interesses se movem ao redor dela.",
+  Análise: "Leitura responsável dos fatos, com separação clara entre informação apurada e interpretação.",
+};
 
 export const DEFAULT_AUTHOR = {
   id: "redacao",
   fullName: "Redação Dossiê Aberto",
   slug: "redacao-dossie-aberto",
   email: null,
-  bio: "Equipe editorial do Dossiê Aberto.",
+  bio: "Projeto editorial independente dedicado a fatos públicos, bastidores e contexto.",
 };
 
 export const PUBLIC_NAVIGATION = [

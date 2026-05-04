@@ -237,10 +237,11 @@ export async function getNewsletterSubscribers(): Promise<NewsletterSubscriber[]
 export async function getSiteSettings(): Promise<SiteSettings> {
   const defaults: SiteSettings = {
     site_name: "Dossiê Aberto",
-    site_description: "O contexto por trás dos fatos.",
+    site_description:
+      "Notícias, bastidores e análise para entender os fatos públicos além da superfície, com atenção a política, tecnologia, economia, cultura, Brasil e mundo.",
     main_author_name: "Redação Dossiê Aberto",
     contact_email: "",
-    footer_text: "Jornalismo claro, sério e contextual.",
+    footer_text: "Projeto editorial independente em desenvolvimento, dedicado a fatos públicos, bastidores e contexto.",
     instagram_url: "",
     x_url: "",
   };

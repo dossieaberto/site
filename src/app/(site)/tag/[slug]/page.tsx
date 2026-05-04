@@ -33,16 +33,25 @@ export default async function TagPage({ params }: PageProps) {
   return (
     <main className="mx-auto max-w-7xl px-4 py-8 md:px-6">
       <p className="text-xs font-black uppercase tracking-[0.22em] text-accent">Tag</p>
-      <h1 className="mt-2 text-4xl font-black md:text-5xl">#{tag.name}</h1>
+      <h1 className="mt-2 font-serif text-5xl font-black md:text-6xl">#{tag.name}</h1>
       <p className="mt-3 max-w-2xl text-lg leading-8 text-muted-foreground">
         Matérias, bastidores e análises relacionadas a {tag.name.toLowerCase()}.
       </p>
 
-      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {articles.map((article) => (
-          <ArticleCard key={article.id} article={article} />
-        ))}
-      </div>
+      {articles.length > 0 ? (
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {articles.map((article) => (
+            <ArticleCard key={article.id} article={article} />
+          ))}
+        </div>
+      ) : (
+        <div className="mt-8 border border-dashed border-border bg-surface p-6">
+          <h2 className="font-serif text-2xl font-black">Nenhuma matéria marcada com esta tag</h2>
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">
+            A tag existe no arquivo editorial, mas ainda não reúne publicações disponíveis ao leitor.
+          </p>
+        </div>
+      )}
     </main>
   );
 }

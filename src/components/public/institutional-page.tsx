@@ -7,7 +7,7 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageContent }) 
     <main className="mx-auto max-w-7xl px-4 py-8 md:px-6">
       <header className="border-b border-border pb-8">
         <p className="text-xs font-black uppercase tracking-[0.22em] text-accent">{page.kicker}</p>
-        <h1 className="mt-3 max-w-4xl text-4xl font-black leading-none md:text-6xl">
+        <h1 className="mt-3 max-w-4xl font-serif text-5xl font-black leading-[0.96] md:text-7xl">
           {page.title}
         </h1>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground">{page.lead}</p>
@@ -17,7 +17,7 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageContent }) 
         <article className="space-y-8">
           {page.sections.map((section) => (
             <section key={section.heading} className="border-b border-border pb-8 last:border-b-0">
-              <h2 className="text-2xl font-black">{section.heading}</h2>
+              <h2 className="font-serif text-3xl font-black">{section.heading}</h2>
               <div className="mt-4 space-y-4">
                 {section.body.map((paragraph) => (
                   <p key={paragraph} className="max-w-3xl text-base leading-8 text-muted-foreground">
@@ -39,9 +39,9 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageContent }) 
           ))}
         </article>
 
-        <aside className="rounded-lg border border-border bg-surface p-5 shadow-sm lg:sticky lg:top-24">
+        <aside className="border border-border bg-surface p-5 lg:sticky lg:top-24">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">{SITE_NAME}</p>
-          <h2 className="mt-2 text-xl font-black">{SITE_TAGLINE}</h2>
+          <h2 className="mt-2 font-serif text-2xl font-black">{SITE_TAGLINE}</h2>
           <dl className="mt-5 space-y-4 text-sm">
             <div>
               <dt className="font-black">Página</dt>

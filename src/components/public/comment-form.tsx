@@ -9,7 +9,7 @@ export function CommentForm({ articleId, articleSlug }: { articleId: string; art
   const [state, formAction, pending] = useActionState(submitComment, initialState);
 
   return (
-    <form action={formAction} className="mt-6 rounded-lg border border-border bg-surface p-5">
+    <form action={formAction} className="mt-6 border border-border bg-surface p-5">
       <input type="hidden" name="articleId" value={articleId} />
       <input type="hidden" name="articleSlug" value={articleSlug} />
       <input className="hidden" tabIndex={-1} autoComplete="off" name="website" aria-hidden="true" />
@@ -22,9 +22,9 @@ export function CommentForm({ articleId, articleSlug }: { articleId: string; art
           <input
             id="comment-name"
             name="name"
-            required
-            className="mt-2 h-11 w-full rounded-lg border border-border bg-background px-3 text-sm outline-none focus:border-accent"
-          />
+          required
+          className="mt-2 h-11 w-full border border-border bg-background px-3 text-sm outline-none focus:border-accent"
+        />
         </div>
         <div>
           <label className="text-sm font-bold" htmlFor="comment-email">
@@ -34,10 +34,10 @@ export function CommentForm({ articleId, articleSlug }: { articleId: string; art
             id="comment-email"
             name="email"
             type="email"
-            required
-            className="mt-2 h-11 w-full rounded-lg border border-border bg-background px-3 text-sm outline-none focus:border-accent"
-          />
-          <p className="mt-1 text-xs text-muted-foreground">Seu e-mail não será exibido.</p>
+          required
+          className="mt-2 h-11 w-full border border-border bg-background px-3 text-sm outline-none focus:border-accent"
+        />
+          <p className="mt-1 text-xs text-muted-foreground">Usado apenas para moderação; não será exibido.</p>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export function CommentForm({ articleId, articleSlug }: { articleId: string; art
           required
           minLength={10}
           rows={5}
-          className="mt-2 w-full rounded-lg border border-border bg-background px-3 py-3 text-sm outline-none focus:border-accent"
+          className="mt-2 w-full border border-border bg-background px-3 py-3 text-sm outline-none focus:border-accent"
         />
       </div>
 
@@ -59,7 +59,7 @@ export function CommentForm({ articleId, articleSlug }: { articleId: string; art
         <button
           type="submit"
           disabled={pending}
-          className="rounded-lg bg-accent px-5 py-3 text-sm font-black text-white transition hover:opacity-90 disabled:opacity-60"
+          className="bg-accent px-5 py-3 text-sm font-black text-accent-foreground transition hover:opacity-90 disabled:opacity-60"
         >
           {pending ? "Enviando..." : "Enviar para moderação"}
         </button>

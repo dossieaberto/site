@@ -14,8 +14,8 @@ export default async function EditPostPage({ params }: PageProps) {
 
   return (
     <div>
-      <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Editar notícia</p>
-      <h1 className="mb-6 text-3xl font-black">{article.title}</h1>
+      <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Editar matéria</p>
+      <h1 className="mb-6 font-serif text-4xl font-black">{article.title}</h1>
       <PostEditor article={article} categories={categories} />
     </div>
   );

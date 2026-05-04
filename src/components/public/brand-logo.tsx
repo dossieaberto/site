@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SITE_TAGLINE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -8,14 +9,21 @@ export function BrandLogo({ siteName, compact = false }: { siteName: string; com
       <span
         aria-hidden
         className={cn(
-          "flex shrink-0 items-center justify-center rounded-md bg-foreground text-background shadow-sm",
-          compact ? "h-9 w-9 text-lg" : "h-11 w-11 text-xl",
+          "relative flex shrink-0 items-center justify-center",
+          compact ? "h-9 w-9" : "h-11 w-11",
         )}
       >
-        <span className="font-black leading-none">DA</span>
+        <Image
+          src="/brand/dossie-aberto-symbol.png"
+          alt=""
+          fill
+          sizes={compact ? "36px" : "44px"}
+          className="object-contain transition group-hover:opacity-80 dark:invert"
+          priority={false}
+        />
       </span>
       <span className="min-w-0">
-        <span className="block truncate text-2xl font-black leading-none text-foreground group-hover:text-accent">
+        <span className="block truncate font-serif text-2xl font-black leading-none text-foreground group-hover:text-accent">
           {siteName}
         </span>
         {!compact ? (

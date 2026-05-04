@@ -28,12 +28,12 @@ export async function subscribeNewsletter(
   if (!isSupabaseConfigured) {
     return {
       ok: false,
-      message: "Newsletter pronta. Configure o Supabase para salvar inscrições reais.",
+      message: "A newsletter ainda não está recebendo inscrições neste ambiente.",
     };
   }
 
   const supabase = await createServerSupabaseClient();
-  if (!supabase) return { ok: false, message: "Supabase não configurado." };
+  if (!supabase) return { ok: false, message: "Não foi possível registrar sua inscrição agora." };
 
   const { error } = await supabase.from("newsletter_subscribers").insert({
     email: parsed.data.email,
@@ -42,11 +42,11 @@ export async function subscribeNewsletter(
 
   if (error) {
     if (error.code === "23505") {
-      return { ok: true, message: "Este e-mail já está cadastrado na newsletter." };
+      return { ok: true, message: "Este e-mail já está na lista do Dossiê Aberto." };
     }
 
-    return { ok: false, message: "Não foi possível cadastrar agora. Tente novamente." };
+    return { ok: false, message: "Não conseguimos concluir a inscrição agora. Tente novamente em instantes." };
   }
 
-  return { ok: true, message: "Cadastro recebido. Obrigado por acompanhar o Dossiê Aberto." };
+  return { ok: true, message: "Inscrição recebida. Obrigado por acompanhar o Dossiê Aberto." };
 }

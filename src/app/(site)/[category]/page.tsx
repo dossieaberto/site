@@ -48,13 +48,13 @@ export default async function CategoryPage({ params }: PageProps) {
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-      <div className="border-b border-border pb-6">
+      <div className="border-b border-foreground/20 pb-7">
         <p className="text-xs font-black uppercase tracking-[0.22em] text-accent">Editoria</p>
-        <h1 className="mt-2 text-4xl font-black md:text-5xl">{category.name}</h1>
+        <h1 className="mt-2 font-serif text-5xl font-black md:text-6xl">{category.name}</h1>
         <p className="mt-3 max-w-2xl text-lg leading-8 text-muted-foreground">{category.description}</p>
       </div>
 
-      <AdPlaceholder label={`Anúncio editoria ${category.name}`} className="mt-6" />
+      <AdPlaceholder label={`Espaço de publicidade em ${category.name}`} className="mt-6" />
 
       {articles.length > 0 ? (
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -63,9 +63,12 @@ export default async function CategoryPage({ params }: PageProps) {
           ))}
         </div>
       ) : (
-        <p className="mt-8 rounded-lg border border-dashed border-border bg-surface p-6 text-muted-foreground">
-          Ainda não há notícias publicadas nesta editoria.
-        </p>
+        <div className="mt-8 border border-dashed border-border bg-surface p-6">
+          <h2 className="font-serif text-2xl font-black">Sem matérias publicadas nesta editoria</h2>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
+            A editoria já está estruturada. Quando houver uma apuração pronta para publicação, ela aparecerá aqui.
+          </p>
+        </div>
       )}
     </main>
   );

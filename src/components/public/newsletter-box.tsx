@@ -10,17 +10,17 @@ export function NewsletterBox({ compact = false }: { compact?: boolean }) {
   const [state, formAction, pending] = useActionState(subscribeNewsletter, initialState);
 
   return (
-    <section className="rounded-lg border border-border bg-surface p-5 shadow-sm">
+    <section className="border border-border bg-surface p-5">
       <div className="flex items-start gap-3">
-        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-white">
+        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
           <Mail aria-hidden size={18} />
         </span>
         <div>
-          <h2 className={compact ? "text-lg font-black" : "text-2xl font-black"}>
-            Receba contexto no seu e-mail
+          <h2 className={compact ? "font-serif text-xl font-black" : "font-serif text-3xl font-black"}>
+            Uma seleção com mais contexto
           </h2>
           <p className="mt-1 text-sm leading-6 text-muted-foreground">
-            Uma seleção das principais análises e bastidores do Dossiê Aberto.
+            Receba fatos, bastidores e análises para ler a semana sem depender apenas da manchete.
           </p>
         </div>
       </div>
@@ -34,15 +34,15 @@ export function NewsletterBox({ compact = false }: { compact?: boolean }) {
           name="email"
           type="email"
           required
-          placeholder="seuemail@exemplo.com"
-          className="min-h-11 rounded-lg border border-border bg-background px-3 text-sm outline-none transition focus:border-accent"
+          placeholder="seu e-mail"
+          className="min-h-11 border border-border bg-background px-3 text-sm outline-none transition focus:border-accent"
         />
         <button
           type="submit"
           disabled={pending}
-          className="min-h-11 rounded-lg bg-accent px-5 text-sm font-black text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+          className="min-h-11 bg-accent px-5 text-sm font-black text-accent-foreground transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {pending ? "Enviando..." : "Cadastrar"}
+          {pending ? "Enviando..." : "Assinar"}
         </button>
       </form>
       {state.message ? (
