@@ -35,15 +35,16 @@ export async function subscribeNewsletter(
   const supabase = await createServerSupabaseClient();
   if (!supabase) return { ok: false, message: "Supabase não configurado." };
 
-  const { error } = await supabase.from("newsletter_subscribers").upsert(
-    {
-      email: parsed.data.email,
-      status: "active",
-    },
-    { onConflict: "email" },
-  );
+  const { error } = await supabase.from("newsletter_subscribers").insert({
+    email: parsed.data.email,
+    status: "active",
+  });
 
   if (error) {
+    if (error.code === "23505") {
+      return { ok: true, message: "Este e-mail já está cadastrado na newsletter." };
+    }
+
     return { ok: false, message: "Não foi possível cadastrar agora. Tente novamente." };
   }
 
