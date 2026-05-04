@@ -38,7 +38,7 @@ export default async function HomePage() {
       <section className="grid gap-6 py-8 lg:grid-cols-[1fr_360px] lg:items-start">
         <div>
           <div className="flex items-center gap-3">
-            <LogoSymbol size="lg" priority />
+            <LogoSymbol size="lg" priority className="h-10 w-10 md:h-12 md:w-12" />
             <p className="text-xs font-black uppercase tracking-[0.24em] text-accent">{SITE_TAGLINE}</p>
           </div>
           <h1 className="mt-3 max-w-4xl text-4xl font-black leading-none md:text-6xl">
@@ -58,7 +58,7 @@ export default async function HomePage() {
           </div>
         </div>
 
-        <div className="rounded-lg border border-border bg-surface p-4 shadow-sm">
+        <div className="rounded-md border border-border/85 bg-surface p-4">
           <h2 className="text-sm font-black uppercase tracking-[0.18em]">Buscar no Dossiê</h2>
           <div className="mt-3">
             <SearchBar />
@@ -99,7 +99,7 @@ export default async function HomePage() {
 
         <aside className="space-y-5">
           <AdPlaceholder label="Anúncio lateral" />
-          <section className="rounded-lg border border-border bg-surface p-5">
+          <section className="rounded-md border border-border/85 bg-surface p-5">
             <h2 className="text-lg font-black">Mais lidas</h2>
             <div className="mt-4 space-y-4">
               {mostRead.map((article, index) => (
@@ -123,7 +123,7 @@ export default async function HomePage() {
 
       <section className="mt-12 grid gap-4 md:grid-cols-3">
         {EDITORIAL_PILLARS.map((pillar) => (
-          <article key={pillar} className="rounded-lg border border-border bg-surface p-5">
+          <article key={pillar} className="rounded-md border border-border/85 bg-surface p-5">
             <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Linha editorial</p>
             <h2 className="mt-2 text-xl font-black">{pillar}</h2>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">

@@ -21,7 +21,7 @@ export default async function AdminDashboardPage() {
         <div className="flex items-center gap-3">
           <LogoSymbol size="md" />
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Dashboard</p>
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Painel editorial</p>
             <h1 className="text-3xl font-black">Visão geral</h1>
             <p className="mt-1 text-sm text-muted-foreground">{SITE_TAGLINE}</p>
           </div>

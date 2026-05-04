@@ -7,7 +7,7 @@ import { SITE_NAME } from "@/lib/constants";
 import type { Author } from "@/types/content";
 
 const navItems = [
-  { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/admin/dashboard", label: "Visão geral", icon: LayoutDashboard },
   { href: "/admin/posts", label: "Notícias", icon: Newspaper },
   { href: "/admin/comments", label: "Comentários", icon: MessageSquare },
   { href: "/admin/newsletter", label: "Newsletter", icon: Users },
