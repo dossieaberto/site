@@ -3,7 +3,6 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { requireAdmin } from "@/lib/supabase/auth";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
@@ -33,13 +32,13 @@ const postSchema = z.object({
 async function uploadCoverImage(file: File | null, slug: string) {
   if (!file || file.size === 0) return null;
 
-  const serviceClient = createSupabaseAdminClient();
-  if (!serviceClient) return null;
+  const supabase = await createServerSupabaseClient();
+  if (!supabase) return null;
 
   const extension = file.name.split(".").pop() || "jpg";
   const path = `${slug}/${Date.now()}.${extension}`;
 
-  const { error } = await serviceClient.storage.from("article-images").upload(path, file, {
+  const { error } = await supabase.storage.from("article-images").upload(path, file, {
     cacheControl: "3600",
     contentType: file.type || "image/jpeg",
     upsert: false,
@@ -47,7 +46,7 @@ async function uploadCoverImage(file: File | null, slug: string) {
 
   if (error) return null;
 
-  const { data } = serviceClient.storage.from("article-images").getPublicUrl(path);
+  const { data } = supabase.storage.from("article-images").getPublicUrl(path);
   return data.publicUrl;
 }
 
