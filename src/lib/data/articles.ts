@@ -2,7 +2,7 @@ import { unstable_noStore as noStore } from "next/cache";
 import { CATEGORIES, DEFAULT_AUTHOR } from "@/lib/constants";
 import { MOCK_ARTICLES, MOCK_COMMENTS, MOCK_TAGS } from "@/lib/mock-data";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
-import { createServerSupabaseClient } from "@/lib/supabase/server";
+import { createPublicSupabaseClient } from "@/lib/supabase/public";
 import { slugify } from "@/lib/utils";
 import type { Article, Author, Category, Comment, Tag } from "@/types/content";
 
@@ -127,7 +127,7 @@ const articleSelect = `
 export async function getCategories(): Promise<Category[]> {
   if (!isSupabaseConfigured) return CATEGORIES;
 
-  const supabase = await createServerSupabaseClient();
+  const supabase = createPublicSupabaseClient();
   if (!supabase) return CATEGORIES;
 
   const { data, error } = await supabase.from("categories").select("*").order("name");
@@ -139,7 +139,7 @@ export async function getCategories(): Promise<Category[]> {
 export async function getTags(): Promise<Tag[]> {
   if (!isSupabaseConfigured) return MOCK_TAGS;
 
-  const supabase = await createServerSupabaseClient();
+  const supabase = createPublicSupabaseClient();
   if (!supabase) return MOCK_TAGS;
 
   const { data, error } = await supabase.from("tags").select("id,name,slug").order("name");
@@ -154,7 +154,7 @@ export async function getPublishedArticles(limit?: number): Promise<Article[]> {
     return typeof limit === "number" ? articles.slice(0, limit) : articles;
   }
 
-  const supabase = await createServerSupabaseClient();
+  const supabase = createPublicSupabaseClient();
   if (!supabase) return sortByDate(publishedMock());
 
   let query = supabase
@@ -186,7 +186,7 @@ export async function getArticleBySlug(slug: string) {
     return publishedMock().find((article) => article.slug === slug) ?? null;
   }
 
-  const supabase = await createServerSupabaseClient();
+  const supabase = createPublicSupabaseClient();
   if (!supabase) return publishedMock().find((article) => article.slug === slug) ?? null;
 
   const { data, error } = await supabase
@@ -209,7 +209,7 @@ export async function getArticlesByCategory(categorySlug: string, limit?: number
     return typeof limit === "number" ? articles.slice(0, limit) : articles;
   }
 
-  const supabase = await createServerSupabaseClient();
+  const supabase = createPublicSupabaseClient();
   if (!supabase) {
     const articles = sortByDate(
       publishedMock().filter((article) => article.category.slug === categorySlug),
@@ -310,7 +310,7 @@ export async function getApprovedComments(articleId: string): Promise<Comment[]>
     );
   }
 
-  const supabase = await createServerSupabaseClient();
+  const supabase = createPublicSupabaseClient();
   if (!supabase) return [];
 
   const { data, error } = await supabase
@@ -335,7 +335,7 @@ export async function getApprovedComments(articleId: string): Promise<Comment[]>
 export async function recordArticleView(articleId: string) {
   if (!isSupabaseConfigured) return;
 
-  const supabase = await createServerSupabaseClient();
+  const supabase = createPublicSupabaseClient();
   if (!supabase) return;
 
   await supabase.from("article_views").insert({ article_id: articleId });
