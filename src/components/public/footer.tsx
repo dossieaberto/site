@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE_DESCRIPTION, SITE_TAGLINE } from "@/lib/constants";
+import { INSTITUTIONAL_PAGES } from "@/lib/institutional-pages";
 import type { Category } from "@/types/content";
 import { BrandLogo } from "./brand-logo";
 import { NewsletterBox } from "./newsletter-box";
@@ -7,7 +8,7 @@ import { NewsletterBox } from "./newsletter-box";
 export function Footer({ categories, siteName }: { categories: Category[]; siteName: string }) {
   return (
     <footer className="mt-16 border-t border-border bg-surface">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 lg:grid-cols-[1fr_0.9fr_0.8fr] md:px-6">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 lg:grid-cols-[1fr_0.9fr_0.75fr_0.75fr] md:px-6">
         <div>
           <BrandLogo siteName={siteName} />
           <p className="mt-4 max-w-md text-sm leading-6 text-muted-foreground">{SITE_DESCRIPTION}</p>
@@ -33,6 +34,17 @@ export function Footer({ categories, siteName }: { categories: Category[]; siteN
             <Link href="/buscar" className="hover:text-accent">
               Busca
             </Link>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-black uppercase tracking-[0.18em]">Institucional</h3>
+          <div className="mt-4 grid gap-2 text-sm font-semibold">
+            {INSTITUTIONAL_PAGES.map((page) => (
+              <Link key={page.slug} href={`/${page.slug}`} className="hover:text-accent">
+                {page.navLabel}
+              </Link>
+            ))}
             <Link href="/rss.xml" className="hover:text-accent">
               RSS
             </Link>

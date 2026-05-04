@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
 import { getCategories, getPublishedArticles, getTags } from "@/lib/data/articles";
+import { INSTITUTIONAL_PAGES } from "@/lib/institutional-pages";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
@@ -23,6 +24,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.5,
     },
+    ...INSTITUTIONAL_PAGES.map((page) => ({
+      url: `${SITE_URL}/${page.slug}`,
+      lastModified: new Date(`${page.updatedAt}T12:00:00`),
+      changeFrequency: "monthly" as const,
+      priority: page.slug === "sobre" || page.slug === "editorial" ? 0.7 : 0.4,
+    })),
     ...categories.map((category) => ({
       url: `${SITE_URL}/${category.slug}`,
       lastModified: now,
